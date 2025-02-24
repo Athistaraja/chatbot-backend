@@ -49,7 +49,11 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/",(req,res) => {
+  res.send(" welcome to chatbot assistant")
+})
+
 // Start the server
-server.listen(PORT, () => {
+app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
