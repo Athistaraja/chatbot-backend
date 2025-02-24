@@ -1,0 +1,28 @@
+{
+  "name": "chat-bot-backend",
+  "version": "1.0.0",
+  "description": "create chat bot",
+  "keywords": [
+    "node.js",
+    "express.js",
+    "mongoose",
+    "socket.io-client"
+  ],
+  "license": "ISC",
+  "author": "athistaraja",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "socket.io": "^4.8.1"
+  }
+}
