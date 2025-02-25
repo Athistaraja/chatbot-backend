@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 const io = new Server(server, {
   path: "/socket.io/",
   cors: {
-    origin: "https://athistaraja-chatbot.netlify.app/", // Replace with your frontend URL
+    origin: "https://athistaraja-chatbot.netlify.app", // Replace with your frontend URL
     methods: ["GET", "POST"],
   },
 });
@@ -47,6 +47,13 @@ io.on("connection", (socket) => {
     console.log("User disconnected");
   });
 });
+
+app.use(cors({
+  origin: "https://athistaraja-chatbot.netlify.app", // Your frontend URL
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+  credentials: true,
+}));
 
 // Simple test route
 app.get("/", (req, res) => {
